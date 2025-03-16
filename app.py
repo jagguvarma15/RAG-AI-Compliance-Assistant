@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Query
+import os
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -17,8 +18,9 @@ index = faiss.read_index("data/cuad/contracts_faiss_optimized.index")
 with open("data/cuad/contracts.txt", "r", encoding="utf-8") as file:
     contracts = file.readlines()
 
+openai_key = os.getenv("OPENAI_API_KEY")
 # OpenAI GPT-4 API Key (Replace with environment variable in production)
-openai_client = OpenAI(api_key="your-openai-api-key")
+openai_client = OpenAI(api_key=openai_key)
 
 # Load fraud detection model
 fraud_model = pipeline("text-classification", model="nlptown/bert-base-multilingual-uncased-sentiment")
@@ -27,7 +29,7 @@ fraud_model = pipeline("text-classification", model="nlptown/bert-base-multiling
 @app.get("/search/")
 def search_contracts(query: str = Query(..., title="Search Query"), k: int = 5):
     """
-    AI-powered legal document retrieval with FAISS + GPT-4.
+    AI-powered legal document retrieval with FAISS + GPT-4o.
     """
     # Convert query to embeddings
     query_embedding = model.encode([query], convert_to_numpy=True)
@@ -40,12 +42,12 @@ def search_contracts(query: str = Query(..., title="Search Query"), k: int = 5):
 
     # Generate a response using OpenAI's GPT-4
     rag_prompt = f"Using these legal documents:\n{retrieved_docs}\nAnswer this query: {query}"
-    response = openai_client.ChatCompletion.create(
-        model="gpt-4",
+    response = OpenAI().chat.completions.create(
+        model="gpt-4o",
         messages=[{"role": "user", "content": rag_prompt}]
     )
 
-    return {"query": query, "retrieved_docs": retrieved_docs, "generated_answer": response["choices"][0]["message"]["content"]}
+    return {"query": query, "retrieved_docs": retrieved_docs, "generated_answer": response.choices[0].message.content}
 
 ### **Task 2: LLM-Powered Fraud Risk Assessment**
 @app.get("/risk-assessment/")
@@ -60,3 +62,5 @@ def risk_assessment(document: str):
 
 # AWS Lambda Compatibility (If deploying on Lambda)
 handler = Mangum(app)
+                                                                                                                                                           64,21         Bot
+                                                                                                                                                           1,21          Top
