@@ -64,7 +64,7 @@ The CUAD (Contract Understanding Atticus Dataset) is a legal document dataset sp
 - Format: JSON
 - Annotations: Over 11,000 expert-annotated question-answer pairs
 - Categories: Contract clauses related to liability, indemnification, obligations, penalties, risk assessment, and more.
-Use Case: AI-powered legal document understanding, compliance automation, and risk assessment.
+- Use Case: AI-powered legal document understanding, compliance automation, and risk assessment.
 
 ---
 ## **💡 Use Cases**
@@ -107,3 +107,8 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 
 ### **Test API**
 your-ec2-public-ip/docs
+
+Future Enhancements
+- Fine-tune embeddings for better legal document retrieval.
+- Integrate JWT authentication for secure API access.
+- Deploy with Terraform for scalable infrastructure.
