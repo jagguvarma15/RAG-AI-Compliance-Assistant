@@ -40,11 +40,13 @@ This project implements a **FastAPI-based AI Compliance Assistant** that enhance
 - Uses **FAISS** to store and retrieve legal documents efficiently.
 - **Retrieval-Augmented Generation (RAG)** integrates OpenAI’s **GPT-4** for accurate query responses.
 - **85% accuracy** in retrieving legal clauses.
+<img width="1386" alt="Screenshot 2025-03-15 at 9 24 07 PM" src="https://github.com/user-attachments/assets/38c24388-43c2-40bc-8a54-0eaa5fa89ffb" />
 
 ### **2. LLM-Powered Fraud Detection**
 - Automated **risk assessment API** using **pretrained transformers**.
 - Detects **fraudulent or non-compliant clauses** in contracts.
 - Reduces **manual risk assessment time by 50%**.
+<img width="1392" alt="Screenshot 2025-03-15 at 9 23 32 PM" src="https://github.com/user-attachments/assets/e9893b62-a619-4f62-a270-9462534ea49f" />
 
 ### **3. Scalable & Cost-Efficient AWS Deployment**
 - **FastAPI + AWS Lambda** enables **serverless deployment**.
