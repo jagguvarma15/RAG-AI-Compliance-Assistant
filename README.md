@@ -46,7 +46,8 @@ This project implements a **FastAPI-based AI Compliance Assistant** that enhance
 - Automated **risk assessment API** using **pretrained transformers**.
 - Detects **fraudulent or non-compliant clauses** in contracts.
 - Reduces **manual risk assessment time by 50%**.
-<img width="1392" alt="Screenshot 2025-03-15 at 9 23 32 PM" src="https://github.com/user-attachments/assets/e9893b62-a619-4f62-a270-9462534ea49f" />
+<img width="1469" alt="Screenshot 2025-03-15 at 9 45 51 PM" src="https://github.com/user-attachments/assets/aa43e063-a598-4004-be4d-1444a7714643" />
+
 
 ### **3. Scalable & Cost-Efficient AWS Deployment**
 - **FastAPI + AWS Lambda** enables **serverless deployment**.
@@ -54,7 +55,19 @@ This project implements a **FastAPI-based AI Compliance Assistant** that enhance
 - **Auto-scaling reduces operational costs by 30%**.
 
 ---
+**Dataset Description: CUAD - Contract Understanding Atticus Dataset**
+The CUAD (Contract Understanding Atticus Dataset) is a legal document dataset specifically designed to train and evaluate AI models for contract analysis and compliance automation. It contains thousands of expert-annotated legal contracts with question-answer pairs to help machine learning models identify key clauses in legal documents.
 
+**Dataset Overview**
+Name: CUAD - Contract Understanding Atticus Dataset
+Source: The Atticus Project
+Size: ~35MB
+Format: JSON
+Annotations: Over 11,000 expert-annotated question-answer pairs
+Categories: Contract clauses related to liability, indemnification, obligations, penalties, risk assessment, and more.
+Use Case: AI-powered legal document understanding, compliance automation, and risk assessment.
+
+---
 ## **💡 Use Cases**
 ### **1. Legal Compliance Teams**
 - Instantly retrieve legal clauses relevant to **GDPR, HIPAA, or SEC regulations**.  
