@@ -51,7 +51,6 @@ This project implements a **FastAPI-based AI Compliance Assistant** that enhance
 
 ### **3. Scalable & Cost-Efficient AWS Deployment**
 - **FastAPI + AWS Lambda** enables **serverless deployment**.
-- **NGINX reverse proxy** improves API response time.
 - **Auto-scaling reduces operational costs by 30%**.
 
 ---
@@ -59,12 +58,12 @@ This project implements a **FastAPI-based AI Compliance Assistant** that enhance
 The CUAD (Contract Understanding Atticus Dataset) is a legal document dataset specifically designed to train and evaluate AI models for contract analysis and compliance automation. It contains thousands of expert-annotated legal contracts with question-answer pairs to help machine learning models identify key clauses in legal documents.
 
 **Dataset Overview**
-Name: CUAD - Contract Understanding Atticus Dataset
-Source: The Atticus Project
-Size: ~35MB
-Format: JSON
-Annotations: Over 11,000 expert-annotated question-answer pairs
-Categories: Contract clauses related to liability, indemnification, obligations, penalties, risk assessment, and more.
+- Name: CUAD - Contract Understanding Atticus Dataset
+- Source: The Atticus Project
+- Size: ~35MB
+- Format: JSON
+- Annotations: Over 11,000 expert-annotated question-answer pairs
+- Categories: Contract clauses related to liability, indemnification, obligations, penalties, risk assessment, and more.
 Use Case: AI-powered legal document understanding, compliance automation, and risk assessment.
 
 ---
